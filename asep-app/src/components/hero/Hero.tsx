@@ -44,7 +44,7 @@ const Hero = () => {
         </div>
 
         {/* RIGHT COLUMN - Glassmorphism UI Composition */}
-        <div className="relative flex items-center justify-center max-w-[500px] lg:max-w-none mx-auto w-full animate-[fadeSlideUp_1s_ease_0.25s_forwards] opacity-0 lg:pl-10">
+        <div className="relative flex items-center justify-center max-w-[800px] lg:max-w-none mx-auto w-full animate-[fadeSlideUp_1s_ease_0.25s_forwards] opacity-0 lg:pl-10">
           <HeroVisual />
         </div>
 

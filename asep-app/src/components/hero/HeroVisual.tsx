@@ -11,14 +11,17 @@ const HeroVisual = () => {
       </div>
 
       {/* Floating UI Elements Composer */}
-      <div className="relative w-full h-full pointer-events-none perspective-[1000px] transform-style-3d">
+      <div 
+        className="relative w-full h-full pointer-events-none"
+        style={{ perspective: '1000px', transformStyle: 'preserve-3d' }}
+      >
         
         {/* === CARD 1: Focus Session (Center/Front) === */}
         <motion.div 
           animate={{ y: [-15, 15, -15] }}
           transition={{ duration: 7, ease: "easeInOut", repeat: Infinity }}
           style={{ willChange: 'transform', transform: 'translateZ(0)' }}
-          className="absolute top-[30%] left-[10%] w-[75%] h-[55%] glass-card rounded-2xl border border-[rgba(255,255,255,0.12)] p-6 z-30 shadow-[0_20px_50px_rgba(4,6,14,0.5)] bg-gradient-to-br from-[rgba(255,255,255,0.06)] to-[rgba(255,255,255,0.01)] backdrop-blur-2xl overflow-hidden"
+          className="absolute top-[22%] left-[10%] w-[75%] h-[50%] glass-card rounded-2xl border border-[rgba(255,255,255,0.12)] p-6 z-30 shadow-[0_20px_50px_rgba(4,6,14,0.5)] bg-gradient-to-br from-[rgba(255,255,255,0.06)] to-[rgba(255,255,255,0.01)] backdrop-blur-2xl overflow-hidden"
         >
           {/* Subtle reflections */}
           <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.5)] to-transparent opacity-50"></div>
@@ -41,7 +44,7 @@ const HeroVisual = () => {
 
           <div className="flex justify-center items-center my-8">
             <div className="relative w-40 h-40">
-              <svg className="w-full h-full transform -rotate-90">
+              <svg className="w-full h-full transform -rotate-90" viewBox="0 0 160 160">
                 <circle cx="80" cy="80" r="70" className="stroke-[rgba(255,255,255,0.05)] fill-none" strokeWidth="8" />
                 <circle cx="80" cy="80" r="70" className="stroke-accent-blue fill-none drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" strokeWidth="8" strokeDasharray="440" strokeDashoffset="110" strokeLinecap="round" />
               </svg>
@@ -92,7 +95,7 @@ const HeroVisual = () => {
           animate={{ y: [4, -6, 4] }}
           transition={{ duration: 6, ease: "easeInOut", repeat: Infinity, delay: 0.8 }}
           style={{ willChange: 'transform', transform: 'translateZ(0)' }}
-          className="absolute bottom-[2%] left-[1%] w-[46%] h-[24%] glass-card rounded-2xl border border-[rgba(255,255,255,0.08)] p-4 z-10 shadow-[0_15px_40px_rgba(4,6,14,0.3)] bg-gradient-to-br from-[rgba(255,255,255,0.05)] to-transparent backdrop-blur-xl flex flex-col justify-between"
+          className="absolute bottom-[2%] left-[1%] w-[46%] h-[22%] glass-card rounded-2xl border border-[rgba(255,255,255,0.08)] p-4 z-10 shadow-[0_15px_40px_rgba(4,6,14,0.3)] bg-gradient-to-br from-[rgba(255,255,255,0.05)] to-transparent backdrop-blur-xl flex flex-col justify-between"
         >
           <div className="flex items-center justify-between">
             <div>
@@ -131,7 +134,7 @@ const HeroVisual = () => {
           animate={{ y: [5, -5, 5] }}
           transition={{ duration: 5, ease: "easeInOut", repeat: Infinity, delay: 1.5 }}
           style={{ willChange: 'transform', transform: 'translateZ(0)' }}
-          className="absolute bottom-[2%] right-[1%] w-[46%] h-[24%] glass-card rounded-2xl border border-[rgba(255,255,255,0.08)] p-4 sm:p-5 z-10 shadow-[0_15px_40px_rgba(4,6,14,0.3)] bg-gradient-to-br from-[rgba(255,255,255,0.05)] to-transparent backdrop-blur-xl flex flex-col justify-between"
+          className="absolute bottom-[2%] right-[1%] w-[46%] h-[22%] glass-card rounded-2xl border border-[rgba(255,255,255,0.08)] p-4 sm:p-5 z-10 shadow-[0_15px_40px_rgba(4,6,14,0.3)] bg-gradient-to-br from-[rgba(255,255,255,0.05)] to-transparent backdrop-blur-xl flex flex-col justify-between"
         >
           <div className="flex items-center gap-3">
              <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-accent-violet/20 border border-accent-violet/30">
