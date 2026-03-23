@@ -2,7 +2,13 @@ import { motion } from 'framer-motion';
 
 const HeroVisual = () => {
   return (
-    <div className="relative w-full aspect-square max-w-[700px] flex items-center justify-center lg:-ml-[5%] scale-[1.15] md:scale-[1.25] transform-origin-center mt-24">
+    <div 
+      className="relative w-full aspect-square max-w-[700px] flex items-center justify-center lg:-ml-[5%] transform-origin-center mt-12 sm:mt-24"
+      style={{ 
+        transform: 'scale(var(--hero-scale, 1))',
+        '--hero-scale': '1.25' 
+      } as any}
+    >
       {/* Background Glowing Orbs */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="absolute w-[80%] h-[80%] rounded-full bg-accent-violet/20 blur-[100px] animate-[glowPulse_6s_ease-in-out_infinite_alternate]"></div>
@@ -20,8 +26,18 @@ const HeroVisual = () => {
         <motion.div 
           animate={{ y: [-15, 15, -15] }}
           transition={{ duration: 7, ease: "easeInOut", repeat: Infinity }}
-          style={{ willChange: 'transform', transform: 'translateZ(0)' }}
-          className="absolute top-[22%] left-[10%] w-[75%] h-[50%] glass-card rounded-2xl border border-[rgba(255,255,255,0.12)] p-6 z-30 shadow-[0_20px_50px_rgba(4,6,14,0.5)] bg-gradient-to-br from-[rgba(255,255,255,0.06)] to-[rgba(255,255,255,0.01)] backdrop-blur-2xl overflow-hidden"
+          style={{ 
+            willChange: 'transform', 
+            transform: 'translateZ(20px)',
+            position: 'absolute',
+            top: '25%',
+            left: '5%',
+            width: '85%',
+            height: '60%',
+            zIndex: 30,
+            transformStyle: 'preserve-3d'
+          }}
+          className="glass-card rounded-2xl border border-[rgba(255,255,255,0.12)] p-6 shadow-[0_20px_50px_rgba(4,6,14,0.5)] bg-gradient-to-br from-[rgba(255,255,255,0.06)] to-[rgba(255,255,255,0.01)] backdrop-blur-2xl overflow-hidden"
         >
           {/* Subtle reflections */}
           <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.5)] to-transparent opacity-50"></div>
@@ -70,8 +86,18 @@ const HeroVisual = () => {
         <motion.div 
           animate={{ y: [10, -10, 10] }}
           transition={{ duration: 6, ease: "easeInOut", repeat: Infinity, delay: 1 }}
-          style={{ willChange: 'transform', transform: 'translateZ(0)' }}
-          className="absolute top-[10%] right-[-3%] w-[60%] h-[43%] glass-card rounded-[20px] border border-[rgba(255,255,255,0.08)] p-5 z-20 shadow-[0_15px_40px_rgba(4,6,14,0.4)] bg-gradient-to-br from-[rgba(255,255,255,0.04)] to-transparent backdrop-blur-xl"
+          style={{ 
+            willChange: 'transform', 
+            transform: 'translateZ(-20px)',
+            position: 'absolute',
+            top: '5%',
+            right: '-10%',
+            width: '60%',
+            height: '40%',
+            zIndex: 20,
+            transformStyle: 'preserve-3d'
+          }}
+          className="glass-card rounded-[20px] border border-[rgba(255,255,255,0.08)] p-5 shadow-[0_15px_40px_rgba(4,6,14,0.4)] bg-gradient-to-br from-[rgba(255,255,255,0.04)] to-transparent backdrop-blur-xl"
         >
           <div className="flex justify-between items-center mb-6">
             <h3 className="text-text-secondary text-xs uppercase tracking-widest font-semibold">Weekly Productivity</h3>
@@ -94,8 +120,18 @@ const HeroVisual = () => {
         <motion.div 
           animate={{ y: [4, -6, 4] }}
           transition={{ duration: 6, ease: "easeInOut", repeat: Infinity, delay: 0.8 }}
-          style={{ willChange: 'transform', transform: 'translateZ(0)' }}
-          className="absolute bottom-[2%] left-[1%] w-[46%] h-[22%] glass-card rounded-2xl border border-[rgba(255,255,255,0.08)] p-4 z-10 shadow-[0_15px_40px_rgba(4,6,14,0.3)] bg-gradient-to-br from-[rgba(255,255,255,0.05)] to-transparent backdrop-blur-xl flex flex-col justify-between"
+          style={{ 
+            willChange: 'transform', 
+            transform: 'translateZ(10px)',
+            position: 'absolute',
+            bottom: '2%',
+            left: '2%',
+            width: '45%',
+            height: '24%',
+            zIndex: 35,
+            transformStyle: 'preserve-3d'
+          }}
+          className="glass-card rounded-2xl border border-[rgba(255,255,255,0.08)] p-4 shadow-[0_15px_40px_rgba(4,6,14,0.3)] bg-gradient-to-br from-[rgba(255,255,255,0.05)] to-transparent backdrop-blur-xl flex flex-col justify-between"
         >
           <div className="flex items-center justify-between">
             <div>
@@ -133,8 +169,18 @@ const HeroVisual = () => {
         <motion.div 
           animate={{ y: [5, -5, 5] }}
           transition={{ duration: 5, ease: "easeInOut", repeat: Infinity, delay: 1.5 }}
-          style={{ willChange: 'transform', transform: 'translateZ(0)' }}
-          className="absolute bottom-[2%] right-[1%] w-[46%] h-[22%] glass-card rounded-2xl border border-[rgba(255,255,255,0.08)] p-4 sm:p-5 z-10 shadow-[0_15px_40px_rgba(4,6,14,0.3)] bg-gradient-to-br from-[rgba(255,255,255,0.05)] to-transparent backdrop-blur-xl flex flex-col justify-between"
+          style={{ 
+            willChange: 'transform', 
+            transform: 'translateZ(10px)',
+            position: 'absolute',
+            bottom: '2%',
+            right: '2%',
+            width: '45%',
+            height: '24%',
+            zIndex: 35,
+            transformStyle: 'preserve-3d'
+          }}
+          className="glass-card rounded-2xl border border-[rgba(255,255,255,0.08)] p-4 sm:p-5 shadow-[0_15px_40px_rgba(4,6,14,0.3)] bg-gradient-to-br from-[rgba(255,255,255,0.05)] to-transparent backdrop-blur-xl flex flex-col justify-between"
         >
           <div className="flex items-center gap-3">
              <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-accent-violet/20 border border-accent-violet/30">
